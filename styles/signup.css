@@ -1,0 +1,23 @@
+
+#signup-form-div{
+    width: 400px;
+    /* border: 2px solid black; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+#signup-form-div form{
+    margin: auto;
+    
+}
+form input{
+    margin-bottom: 10px;
+}
+#submit{
+background-color: teal;
+padding: 5px 10px 5px 10px;
+border: none;
+border-radius: 5px;
+}

@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:"poppine";
+}
+#container{
+    /* border: 2px solid black; */
+    margin: auto;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    font-size: 20px;
+}
+#container a{
+    text-decoration: none;
+    color: black;
+    margin-left: 100px;
+}
+#container a:hover{
+    color: red;
+}
+#slideshow{
+    margin: auto;
+    /* border: 2px solid black; */
+    width: 500px;
+}

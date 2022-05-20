@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/signup.css">
+
+    </head>
+
+    <body>
+
+        <div id="container">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="index.html">Home</a>
+        </div>
+
+        <div id="signup-form-div">
+            <h1>Sign up</h1><br>
+
+            <form>
+                <!--Write form input elements here-->
+            <input type="text" placeholder="Enter Your First Name" id="first"><br>
+            <input type="text" placeholder="Contact No." id="contact"><br>
+            <input type="email" placeholder="Enter Your Email" id="email"><br>
+            <input type="password" name="" id="password" placeholder="Enter Your Password"><br>
+            <br>
+            <input type="submit" value="Submit"  id="submit">
+
+
+            </form>
+
+        </div>
+    </body>
+
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", signUpFun);
+
+var userData = JSON.parse(localStorage.getItem("userCreds"))||[]
+function signUpFun() {
+  event.preventDefault();
+
+  var userObj = {
+    email: document.querySelector("#email").value,
+    password: document.querySelector("#password").value,
+    firstName: document.querySelector("#first").value,
+    contactNo: document.querySelector("#contact").value,
+};
+  console.log(userObj);
+  userData.push(userObj);
+  console.log(userData)
+  localStorage.setItem("userCreds",JSON.stringify(userData))
+  window.location.href="login.html"
+
+}
+</script>
